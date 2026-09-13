@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NudgeSheet — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.2em; margin-top: 2em; }
+  code { background: #f2f2f2; padding: 2px 5px; border-radius: 3px; font-size: 0.9em; }
+  .meta { color: #666; font-size: 0.9em; }
+  ul { padding-left: 1.2em; }
+</style>
+</head>
+<body>
+<h1>NudgeSheet Privacy Policy</h1>
+<p class="meta">Effective date: September 13, 2026</p>
+
+<p>NudgeSheet is a Google Sheets add-on published by NudgeSheet. It adds follow-up reminders and actions on top of a spreadsheet the user already owns. This policy describes the limited information NudgeSheet processes.</p>
+
+<h2>Google Sheets data</h2>
+<p>NudgeSheet reads the spreadsheet columns that the user maps in order to display follow-ups and perform requested actions (marking a follow-up done, snoozing it, or refreshing the view). Lead names, companies, email addresses, notes, spreadsheet content, spreadsheet IDs, and raw error messages are never sent to NudgeSheet's telemetry service. Lead data always remains in the user's own Google Sheet.</p>
+<p>Column mapping is stored in that spreadsheet's document properties, scoped to the spreadsheet itself. Reminder settings and delivery state are stored in the installing user's Apps Script user properties, scoped to that user's Google account.</p>
+<p>The daily reminder email, when enabled, is sent only to the Google user who enabled it. NudgeSheet does not read Gmail and does not send email to leads or customers.</p>
+
+<h2>Limited usage statistics</h2>
+<p>NudgeSheet collects a small set of anonymous usage events to understand whether the product is being used and to improve reliability:</p>
+<ul>
+  <li>A randomly generated install identifier that is not derived from an email address or any Google account identifier.</li>
+  <li>One of six event names: <code>install</code>, <code>mapping_completed</code>, <code>sidebar_opened</code>, <code>action_done</code>, <code>action_snooze</code>, or <code>digest_sent</code>.</li>
+  <li>The event timestamp.</li>
+  <li>The application identifier <code>nudgesheet</code>.</li>
+</ul>
+<p>This telemetry payload never contains lead data, spreadsheet content, a spreadsheet identifier, a Google account email address, or a raw error message. The data is not used for advertising, is not sold, and is not shared with third parties other than the infrastructure provider used to store it (Supabase, acting solely as a data processor).</p>
+<p><strong>Retention:</strong> usage event records are retained for up to 24 months from the event date, after which they are deleted. Aggregated counts derived from this data (e.g. "N installs used mapping this month") may be retained longer for product planning, without any per-install identifier attached.</p>
+
+<h2>Security</h2>
+<p>Telemetry is transmitted over HTTPS to a collector that authenticates each application with a dedicated secret key and rejects any event name, field, or application identifier that is not on an explicit allowlist. The underlying database has row-level security enabled with no public read or write access; only the collector service can write to it.</p>
+<p>NudgeSheet's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Your choices</h2>
+<p>Uninstalling the add-on stops all data collection going forward. Column mappings and reminder settings are removed when the add-on is uninstalled from a spreadsheet or Google account, following normal Apps Script property lifecycle behavior.</p>
+
+<h2>Changes to this policy</h2>
+<p>Material changes to what is collected or how it is used will be posted on this page with an updated effective date before the changed processing begins.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or NudgeSheet's data handling can be sent to <a href="mailto:jack@papertraillabs.com">jack@papertraillabs.com</a>.</p>
+
+<p><a href="index.html">&larr; Back</a></p>
+</body>
+</html>
